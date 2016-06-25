@@ -45,7 +45,9 @@ gulp.task('css', function(){
         .pipe(autoprefixer({
             browsers: cssConfig.prefixerScheme
         }))
-        .pipe(gulp.dest('./build/css/bootstrap-datetimepicker.css'))
+        .pipe(gulp.dest('./build/css/'))
+        .pipe(rename('bootstrap-datetimepicker.css'))
+        .pipe(gulp.dest('./build/css/'))
         .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
         .pipe(gulp.dest('./build/css/'))

@@ -283,15 +283,16 @@
                 }
 
                 if (!use24Hours) {
-                    topRow.append($('<td>').addClass('separator'));
-                    middleRow.append($('<td>')
-                        .append($('<button>').addClass('btn btn-primary').attr({'data-action': 'togglePeriod', tabindex: '-1', 'title': options.tooltips.togglePeriod})));
-                    bottomRow.append($('<td>').addClass('separator'));
+                    // topRow.append($('<td>').addClass('separator'));
+                    // middleRow.append($('<td>')
+                    //     .append($('<button>').addClass('btn btn-primary').attr({'data-action': 'togglePeriod', tabindex: '-1', 'title': options.tooltips.togglePeriod})));
+                    // bottomRow.append($('<td>').addClass('separator'));
                 }
 
                 return $('<div>').addClass('timepicker-picker')
                     .append($('<table>').addClass('table-condensed')
-                        .append([topRow, middleRow, bottomRow]));
+                        .append([topRow, middleRow, bottomRow]))
+                    .append($('<div>').addClass('toggle-period').append($('<button>').addClass('bh-btn bh-btn-primary').attr({'data-action': 'togglePeriod', tabindex: '-1', 'title': options.tooltips.togglePeriod})));
             },
 
             getTimePickerTemplate = function () {
@@ -2369,24 +2370,24 @@
     $.fn.datetimepicker.defaults = {
         timeZone: 'Etc/UTC',
         format: false,
-        dayViewHeaderFormat: 'MMMM YYYY',
+        dayViewHeaderFormat: 'YYYY MMMM',
         extraFormats: false,
         stepping: 1,
         minDate: false,
         maxDate: false,
         useCurrent: true,
         collapse: true,
-        locale: moment.locale(),
+        locale: 'zh-cn',
         defaultDate: false,
         disabledDates: false,
         enabledDates: false,
         icons: {
-            time: 'glyphicon glyphicon-time',
-            date: 'glyphicon glyphicon-calendar',
-            up: 'glyphicon glyphicon-chevron-up',
-            down: 'glyphicon glyphicon-chevron-down',
-            previous: 'glyphicon glyphicon-chevron-left',
-            next: 'glyphicon glyphicon-chevron-right',
+            time: 'iconfont icon-accesstime',
+            date: 'iconfont icon-daterange',
+            up: 'iconfont icon-keyboardarrowup',
+            down: 'iconfont icon-keyboardarrowdown',
+            previous: 'iconfont icon-keyboardarrowleft',
+            next: 'iconfont icon-keyboardarrowright',
             today: 'glyphicon glyphicon-screenshot',
             clear: 'glyphicon glyphicon-trash',
             close: 'glyphicon glyphicon-remove'

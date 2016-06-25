@@ -3,8 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" media="screen"
+          href="http://res.wisedu.com/fe_components/jqwidget/blue/bh.css">
+    <link rel="stylesheet" type="text/css" media="screen"
+          href="http://res.wisedu.com/fe_components/iconfont/iconfont.css">
+    <link href="../build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/moment/min/moment-with-locales.min.js"></script>
+    <script src="../src/js/bootstrap-datetimepicker.js"></script>
 </head>
 <body>
+
+<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group" style="width: 400px">
+                <!--<div class="jqx-widget jqx-datetimeinput jqx-input jqx-overflow-hidden jqx-rc-all jqx-reset jqx-clear jqx-widget-content">-->
+                    <!--<div id="datetimepicker1" class="input-group date jqx-max-size jqx-position-relative">-->
+                        <!--<input class="jqx-position-absolute jqx-reset jqx-clear jqx-input-content jqx-widget-content jqx-rc-all">-->
+                        <!--<span style="height: 100%; width: 19px; right: 0px;"-->
+                              <!--class="input-group-addon jqx-position-absolute jqx-action-button jqx-fill-state-normal jqx-rc-r jqx-fill-state-pressed">-->
+                            <!--<div class="jqx-icon jqx-icon-calendar jqx-icon-calendar-pressed"></div>-->
+                        <!--</span>-->
+
+                    <!--</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar">默认配置
+                        </span>
+                    </span>
+                </div>
+
+                <div class='input-group date bh-mt-16' id='datetimepicker2'>
+                    <input type='text' class="form-control"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar">选择年
+                        </span>
+                    </span>
+                </div>
+
+                <div class='input-group date bh-mt-16' id='datetimepicker3'>
+                    <input type='text' class="form-control"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar">选择月
+                        </span>
+                    </span>
+                </div>
+
+                <div class='input-group date bh-mt-16' id='datetimepicker4'>
+                    <input type='text' class="form-control"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar">选择日
+                        </span>
+                    </span>
+                </div>
+
+                <div class='input-group date bh-mt-16' id='datetimepicker5'>
+                    <input type='text' class="form-control"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar">选择时
+                        </span>
+                    </span>
+                </div>
+
+                <div class='input-group date bh-mt-16' id='datetimepicker6'>
+                    <input type='text' class="form-control"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar">设定日期范围
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+//                默认配置
+                $('#datetimepicker1').datetimepicker({
+                    debug: true
+                });
+
+//                选择年
+                $('#datetimepicker2').datetimepicker({
+                    debug: true,
+                    viewMode: 'years',
+                    format: 'YYYY'
+                });
+
+//                选择月
+                $('#datetimepicker3').datetimepicker({
+                    debug: true,
+                    viewMode: 'months',
+                    format: 'YYYY/MM'
+                });
+
+//                选择日
+                $('#datetimepicker4').datetimepicker({
+                    debug: true
+                });
+
+//                选择时
+                $('#datetimepicker5').datetimepicker({
+                    debug: true,
+                    format: 'LT'
+                });
+
+//                设定日期范围
+                $('#datetimepicker6').datetimepicker({
+                    debug: true,
+                    minDate: '2016/6/5',
+                    maxDate: '2016/6/27'
+                });
+            });
+        </script>
+    </div>
+</div>
+
 
 </body>
 </html>

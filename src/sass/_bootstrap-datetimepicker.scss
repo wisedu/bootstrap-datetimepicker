@@ -3,14 +3,16 @@
  * ! version : 4.7.14
  * https://github.com/Eonasdan/bootstrap-datetimepicker/
  */
+@import "skins/blue/color";
+
 $bs-datetimepicker-timepicker-font-size: 1.2em !default;
-$bs-datetimepicker-active-bg: $btn-primary-bg !default;
-$bs-datetimepicker-active-color: $btn-primary-color !default;
-$bs-datetimepicker-border-radius: $border-radius-base !default;
-$bs-datetimepicker-btn-hover-bg: $gray-lighter !default;
-$bs-datetimepicker-disabled-color: $gray-light !default;
-$bs-datetimepicker-alternate-color: $gray-light !default;
-$bs-datetimepicker-secondary-border-color: #ccc !default;
+$bs-datetimepicker-active-bg: $brand-primary !default;
+$bs-datetimepicker-active-color: #fff !default;
+$bs-datetimepicker-border-radius: 4px !default;
+$bs-datetimepicker-btn-hover-bg: $primary-lv4 !default;
+$bs-datetimepicker-disabled-color: $gray-lv4 !default;
+$bs-datetimepicker-alternate-color: $gray-lv3 !default;
+$bs-datetimepicker-secondary-border-color: $gray-lv4 !default;
 $bs-datetimepicker-secondary-border-color-rgba: rgba(0, 0, 0, 0.2) !default;
 $bs-datetimepicker-primary-border-color: white !default;
 $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
@@ -18,24 +20,26 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
 .bootstrap-datetimepicker-widget {
     list-style: none;
 
+    & .datepicker{
+        padding: 16px 16px 0 16px;
+    }
+
     &.dropdown-menu {
-        margin: 2px 0;
-        padding: 4px;
-        width: 19em;
+        width: 240px;
 
-        &.timepicker-sbs {
-            @media (min-width: $screen-sm-min) {
-                width: 38em;
-            }
-
-            @media (min-width: $screen-md-min) {
-                width: 38em;
-            }
-
-            @media (min-width: $screen-lg-min) {
-                width: 38em;
-            }
-        }
+        //&.timepicker-sbs {
+        //    @media (min-width: 768px) {
+        //        width: 38em;
+        //    }
+        //
+        //    @media (min-width: 992px) {
+        //        width: 38em;
+        //    }
+        //
+        //    @media (min-width: 1200px) {
+        //        width: 38em;
+        //    }
+        //}
 
         &:before, &:after {
             content: '';
@@ -100,6 +104,7 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
 
     a[data-action] {
         padding: 6px 0;
+        color: $gray-lv2;
     }
 
     a[data-action]:active {
@@ -178,9 +183,16 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
             line-height: inherit;
 
             span {
-                line-height: 2.5;
-                height: 2.5em;
+                line-height: 34px;
+                height: 34px;
                 width: 100%;
+
+                &.icon-accesstime{
+                    border-top: 1px solid $gray-lv5;
+                }
+                &.icon-daterange{
+                    border-bottom: 1px solid $gray-lv5;
+                }
             }
         }
     }
@@ -194,15 +206,16 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
         & th {
             text-align: center;
             border-radius: $bs-datetimepicker-border-radius;
+            font-weight: normal;
         }
 
         & th {
-            height: 20px;
-            line-height: 20px;
-            width: 20px;
+            height: 32px;
+            line-height: 32px;
+            width: 32px;
 
             &.picker-switch {
-                width: 145px;
+                width: 144px;
             }
 
             &.disabled,
@@ -235,6 +248,7 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
             height: 54px;
             line-height: 54px;
             width: 54px;
+            font-size: 12px;
 
             &.cw {
                 font-size: .8em;
@@ -244,9 +258,9 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
             }
 
             &.day {
-                height: 20px;
-                line-height: 20px;
-                width: 20px;
+                height: 30px;
+                line-height: 30px;
+                width: 30px;
             }
 
             &.day:hover,
@@ -264,16 +278,15 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
 
             &.today {
                 position: relative;
-
-                &:before {
-                    content: '';
-                    display: inline-block;
-                    border: 0 0 7px 7px solid transparent;
-                    border-bottom-color: $bs-datetimepicker-active-bg;
-                    border-top-color: $bs-datetimepicker-secondary-border-color-rgba;
+                &:before{
+                    content: "";
                     position: absolute;
-                    bottom: 4px;
-                    right: 4px;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid $brand-primary;
+                    border-radius: $bs-datetimepicker-border-radius;
                 }
             }
 
@@ -282,10 +295,6 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
                 background-color: $bs-datetimepicker-active-bg;
                 color: $bs-datetimepicker-active-color;
                 text-shadow: $bs-datetimepicker-text-shadow;
-            }
-
-            &.active.today:before {
-                border-bottom-color: #fff;
             }
 
             &.disabled,
@@ -297,12 +306,18 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
 
             span {
                 display: inline-block;
-                width: 54px;
-                height: 54px;
-                line-height: 54px;
-                margin: 2px 1.5px;
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
                 cursor: pointer;
-                border-radius: $bs-datetimepicker-border-radius;
+
+                &.year,
+                &.month{
+                    width: 50px;
+                    height: 48px;
+                    line-height: 48px;
+                    border-radius: $bs-datetimepicker-border-radius;
+                }
 
                 &:hover {
                     background: $bs-datetimepicker-btn-hover-bg;
@@ -334,10 +349,77 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
             line-height: 27px;
         }
     }
+
+    & .timepicker-picker{
+        & .table-condensed{
+            margin-top: 24px;
+        }
+    }
 }
 
 .input-group.date {
     & .input-group-addon {
         cursor: pointer;
+    }
+}
+
+
+//下拉样式
+// The dropdown wrapper (div)
+.dropup,
+.dropdown {
+    position: relative;
+}
+
+// Prevent the focus on the dropdown toggle when closing dropdowns
+.dropdown-toggle:focus {
+    outline: 0;
+}
+
+// The dropdown menu (ul)
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none; // none by default, but block on "open" of the menu
+    float: left;
+    min-width: 160px;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+    background-color: #fff;
+    border: 1px solid $gray-lv4;
+    border-radius: 2px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    background-clip: padding-box;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.collapse{
+    display: none;
+    &.in {
+        display: block;
+    }
+}
+
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+
+.toggle-period{
+    width: 100%;
+    padding-bottom: 40px;
+    text-align: center;
+
+    & .bh-btn{
+        min-width: 30px;
     }
 }
