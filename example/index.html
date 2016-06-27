@@ -7,16 +7,27 @@
           href="http://res.wisedu.com/fe_components/jqwidget/blue/bh.css">
     <link rel="stylesheet" type="text/css" media="screen"
           href="http://res.wisedu.com/fe_components/iconfont/iconfont.css">
-    <link href="../build/css/blue/bootstrap-datetimepicker.css" rel="stylesheet">
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../node_modules/moment/min/moment-with-locales.min.js"></script>
-    <script src="../src/js/bootstrap-datetimepicker.js"></script>
+    <link href="../css/blue/bhtc-datetimepicker.css" rel="stylesheet">
+    <script src="http://res.wisedu.com/fe_components/jquery-1.11.3.js"></script>
+    <script src="http://res.wisedu.com/fe_components/bhtc/moment/min/moment-with-locales.min.js"></script>
+    <script src="../js/bhtc-datetimepicker.js"></script>
 </head>
 <body>
 
 <div class="container">
     <div class="row">
         <div class='col-sm-6'>
+            <h4>依赖js</h4>
+            <div>http://res.wisedu.com/fe_components/jquery-1.11.3.js</div>
+            <div>http://res.wisedu.com/fe_components/bhtc/moment/min/moment-with-locales.min.js</div>
+            <div>http://res.wisedu.com/fe_components/bhtc/bhtc-datetimepicker/js/bhtc-datetimepicker.js</div>
+
+            <h4>依赖css</h4>
+            <div>http://res.wisedu.com/fe_components/jqwidget/blue/bh.min.css</div>
+            <div>http://res.wisedu.com/fe_components/iconfont/iconfont.css</div>
+            <div>http://res.wisedu.com/fe_components/bhtc/bhtc-datetimepicker/css/blue/bhtc-datetimepicker.css</div>
+
+
             <div class="form-group" style="width: 400px;">
                 <div class='bhtc-input-group' id='datetimepicker1'>
                     <input type='text' class="form-control"/>
@@ -70,42 +81,38 @@
         <script type="text/javascript">
             $(function () {
 //                默认配置
-                $('#datetimepicker0').datetimepicker({
-                    debug: true
-                });
-
                 $('#datetimepicker1').datetimepicker({
-                    debug: true
+//                    debug: true
                 });
 
 //                选择年
                 $('#datetimepicker2').datetimepicker({
-                    debug: true,
+//                    debug: true,
                     viewMode: 'years',
                     format: 'YYYY'
                 });
 
 //                选择月
                 $('#datetimepicker3').datetimepicker({
-                    debug: true,
+//                    debug: true,
                     viewMode: 'months',
                     format: 'YYYY/MM'
                 });
 
 //                选择日
                 $('#datetimepicker4').datetimepicker({
-                    debug: true
+//                    debug: true
                 });
 
 //                选择时
                 $('#datetimepicker5').datetimepicker({
-                    debug: true,
+//                    debug: true,
                     format: 'LT'
                 });
 
 //                设定日期范围
                 $('#datetimepicker6').datetimepicker({
-                    debug: true,
+//                    debug: true,
                     minDate: '2016/6/5',
                     maxDate: '2016/6/27'
                 });
