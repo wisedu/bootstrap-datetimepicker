@@ -17,62 +17,50 @@
 <div class="container">
     <div class="row">
         <div class='col-sm-6'>
-            <div class="form-group" style="width: 400px">
-                <!--<div class="jqx-widget jqx-datetimeinput jqx-input jqx-overflow-hidden jqx-rc-all jqx-reset jqx-clear jqx-widget-content">-->
-                    <!--<div id="datetimepicker1" class="input-group date jqx-max-size jqx-position-relative">-->
-                        <!--<input class="jqx-position-absolute jqx-reset jqx-clear jqx-input-content jqx-widget-content jqx-rc-all">-->
-                        <!--<span style="height: 100%; width: 19px; right: 0px;"-->
-                              <!--class="input-group-addon jqx-position-absolute jqx-action-button jqx-fill-state-normal jqx-rc-r jqx-fill-state-pressed">-->
-                            <!--<div class="jqx-icon jqx-icon-calendar jqx-icon-calendar-pressed"></div>-->
-                        <!--</span>-->
-
-                    <!--</span>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-                <div class='input-group date' id='datetimepicker1'>
+            <div class="form-group" style="width: 400px;">
+                <div class='bhtc-input-group' id='datetimepicker1'>
                     <input type='text' class="form-control"/>
-                    <span class="input-group-addon">
+                    <span class="bhtc-input-group-addon">
                         <span class="glyphicon glyphicon-calendar">默认配置
                         </span>
                     </span>
                 </div>
 
-                <div class='input-group date bh-mt-16' id='datetimepicker2'>
+                <div class='bhtc-input-group bh-mt-16' id='datetimepicker2'>
                     <input type='text' class="form-control"/>
-                    <span class="input-group-addon">
+                    <span class="bhtc-input-group-addon">
                         <span class="glyphicon glyphicon-calendar">选择年
                         </span>
                     </span>
                 </div>
 
-                <div class='input-group date bh-mt-16' id='datetimepicker3'>
+                <div class='bhtc-input-group bh-mt-16' id='datetimepicker3'>
                     <input type='text' class="form-control"/>
-                    <span class="input-group-addon">
+                    <span class="bhtc-input-group-addon">
                         <span class="glyphicon glyphicon-calendar">选择月
                         </span>
                     </span>
                 </div>
 
-                <div class='input-group date bh-mt-16' id='datetimepicker4'>
+                <div class='bhtc-input-group bh-mt-16' id='datetimepicker4'>
                     <input type='text' class="form-control"/>
-                    <span class="input-group-addon">
+                    <span class="bhtc-input-group-addon">
                         <span class="glyphicon glyphicon-calendar">选择日
                         </span>
                     </span>
                 </div>
 
-                <div class='input-group date bh-mt-16' id='datetimepicker5'>
+                <div class='bhtc-input-group bh-mt-16' id='datetimepicker5'>
                     <input type='text' class="form-control"/>
-                    <span class="input-group-addon">
+                    <span class="bhtc-input-group-addon">
                         <span class="glyphicon glyphicon-calendar">选择时
                         </span>
                     </span>
                 </div>
 
-                <div class='input-group date bh-mt-16' id='datetimepicker6'>
+                <div class='bhtc-input-group bh-mt-16' id='datetimepicker6'>
                     <input type='text' class="form-control"/>
-                    <span class="input-group-addon">
+                    <span class="bhtc-input-group-addon">
                         <span class="glyphicon glyphicon-calendar">设定日期范围
                         </span>
                     </span>
@@ -82,6 +70,10 @@
         <script type="text/javascript">
             $(function () {
 //                默认配置
+                $('#datetimepicker0').datetimepicker({
+                    debug: true
+                });
+
                 $('#datetimepicker1').datetimepicker({
                     debug: true
                 });

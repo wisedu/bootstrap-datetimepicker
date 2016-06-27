@@ -410,23 +410,30 @@
             },
 
             place = function () {
-                var position = (component || element).position(),
-                    offset = (component || element).offset(),
+                // var position = (component || element).position(),
+                //     offset = (component || element).offset(),
+                var position = element.position(),
+                    offset = element.offset(),
                     vertical = options.widgetPositioning.vertical,
                     horizontal = options.widgetPositioning.horizontal,
                     parent;
 
                 if (options.widgetParent) {
-                    parent = options.widgetParent.append(widget);
+                    // parent = options.widgetParent.append(widget);
+                    parent = options.widgetParent;
                 } else if (element.is('input')) {
-                    parent = element.after(widget).parent();
+                    // parent = element.after(widget).parent();
+                    parent = element.parent();
                 } else if (options.inline) {
-                    parent = element.append(widget);
+                    // parent = element.append(widget);
+                    parent = element;
                     return;
                 } else {
                     parent = element;
-                    element.children().first().after(widget);
+                    // element.children().first().after(widget);
                 }
+
+                $('body').append(widget);
 
                 // Top and bottom logic
                 if (vertical === 'auto') {
@@ -471,11 +478,18 @@
                     throw new Error('datetimepicker component should be placed within a relative positioned container');
                 }
 
+                // widget.css({
+                //     top: vertical === 'top' ? 'auto' : position.top + element.outerHeight() + 8,
+                //     bottom: vertical === 'top' ? position.top + element.outerHeight() : 'auto',
+                //     left: horizontal === 'left' ? (parent === element ? 0 : position.left) : 'auto',
+                //     right: horizontal === 'left' ? 'auto' : parent.outerWidth() - element.outerWidth() - (parent === element ? 0 : position.left)
+                // });
+                //widget插入点改为body的调整
                 widget.css({
-                    top: vertical === 'top' ? 'auto' : position.top + element.outerHeight(),
-                    bottom: vertical === 'top' ? position.top + element.outerHeight() : 'auto',
-                    left: horizontal === 'left' ? (parent === element ? 0 : position.left) : 'auto',
-                    right: horizontal === 'left' ? 'auto' : parent.outerWidth() - element.outerWidth() - (parent === element ? 0 : position.left)
+                    top: vertical === 'top' ? offset.top - widget.outerHeight() - 8 : offset.top + element.outerHeight() + 8,
+                    // bottom: vertical === 'top' ? position.top + element.outerHeight() : 'auto',
+                    left: horizontal === 'left' ? (parent === element ? 0 : offset.left) : 'auto',
+                    right: horizontal === 'left' ? 'auto' : parent.outerWidth() - element.outerWidth() - (parent === element ? 0 : offset.left)
                 });
             },
 

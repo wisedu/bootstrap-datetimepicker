@@ -188,7 +188,7 @@
   .bhtc-datetimepicker-widget .bhtc-timepicker-picker .table-condensed {
     margin-top: 24px; }
 
-.bhtc-input-group.date .bhtc-input-group-addon {
+.bhtc-input-group .bhtc-input-group-addon {
   cursor: pointer; }
 
 .bhtc-dropup,
@@ -201,7 +201,7 @@
 .bhtc-dropdown-menu {
   position: absolute;
   top: 100%;
-  z-index: 1000;
+  z-index: 9000;
   display: none;
   float: left;
   min-width: 160px;

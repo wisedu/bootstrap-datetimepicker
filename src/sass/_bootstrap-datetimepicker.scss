@@ -356,7 +356,7 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
     }
 }
 
-.bhtc-input-group.date {
+.bhtc-input-group {
     & .bhtc-input-group-addon {
         cursor: pointer;
     }
@@ -379,7 +379,7 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
 .bhtc-dropdown-menu {
     position: absolute;
     top: 100%;
-    z-index: 1000;
+    z-index: 9000;
     display: none; // none by default, but block on "open" of the menu
     float: left;
     min-width: 160px;
