@@ -5,6 +5,11 @@ var sass = require('gulp-sass');
 var minifycss = require('gulp-minify-css');
 var browserSync = require('browser-sync');
 var autoprefixer = require('gulp-autoprefixer');
+var concat = require('gulp-concat');
+
+var cssFiles = [
+    'blue', 'colorE', 'green', 'lightBlue', 'purple'
+];
 
 var cssConfig = {
     prefixerScheme: ['> 1%', 'last 2 versions', 'Android >= 4.0', 'iOS >= 8'],
@@ -40,17 +45,23 @@ gulp.task('js', function(){
 });
 
 gulp.task('css', function(){
-    gulp.src('./src/sass/bootstrap-datetimepicker-build.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer({
-            browsers: cssConfig.prefixerScheme
-        }))
-        .pipe(gulp.dest('./build/css/'))
-        .pipe(rename('bootstrap-datetimepicker.css'))
-        .pipe(gulp.dest('./build/css/'))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(minifycss())
-        .pipe(gulp.dest('./build/css/'))
+    for(var i=0, cssFilesLen = cssFiles.length; i<cssFilesLen; i++){
+        var skinName = cssFiles[i];
+        var writeFilePath = './build/css/'+skinName;
+        gulp.src(['./src/sass/skins/'+skinName+'/color.scss',
+            './src/sass/*.scss'])
+            .pipe(concat('bootstrap-datetimepicker.scss'))
+            .pipe(sass().on('error', sass.logError))
+            .pipe(autoprefixer({
+                browsers: cssConfig.prefixerScheme
+            }))
+            .pipe(gulp.dest(writeFilePath))
+            .pipe(rename('bootstrap-datetimepicker.css'))
+            .pipe(gulp.dest(writeFilePath))
+            .pipe(rename({suffix: '.min'}))
+            .pipe(minifycss())
+            .pipe(gulp.dest(writeFilePath))
+    }
 });
 
 gulp.task('watch', function () {
