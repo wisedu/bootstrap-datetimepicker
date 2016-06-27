@@ -16,14 +16,14 @@ $bs-datetimepicker-secondary-border-color-rgba: rgba(0, 0, 0, 0.2) !default;
 $bs-datetimepicker-primary-border-color: white !default;
 $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
 
-.bootstrap-datetimepicker-widget {
+.bhtc-datetimepicker-widget {
     list-style: none;
 
-    & .datepicker{
+    & .bhtc-datepicker{
         padding: 16px 16px 0 16px;
     }
 
-    &.dropdown-menu {
+    &.bhtc-dropdown-menu {
         width: 240px;
 
         //&.timepicker-sbs {
@@ -46,7 +46,7 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
             position: absolute;
         }
 
-        &.bottom {
+        &.bhtc-bottom {
             &:before {
                 border-left: 7px solid transparent;
                 border-right: 7px solid transparent;
@@ -65,7 +65,7 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
             }
         }
 
-        &.top {
+        &.bhtc-top {
             &:before {
                 border-left: 7px solid transparent;
                 border-right: 7px solid transparent;
@@ -84,7 +84,7 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
             }
         }
 
-        &.pull-right {
+        &.bhtc-pull-right {
             &:before {
                 left: auto;
                 right: 6px;
@@ -97,7 +97,7 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
         }
     }
 
-    .list-unstyled {
+    .bhtc-list-unstyled {
         margin: 0;
     }
 
@@ -110,7 +110,7 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
         box-shadow: none;
     }
 
-    .timepicker-hour, .timepicker-minute, .timepicker-second {
+    .bhtc-timepicker-hour, .bhtc-timepicker-minute, .bhtc-timepicker-second {
         width: 54px;
         font-weight: bold;
         font-size: $bs-datetimepicker-timepicker-font-size;
@@ -121,52 +121,52 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
         padding: 6px;
     }
 
-    .btn[data-action="incrementHours"]::after {
+    .bhtc-btn[data-action="incrementHours"]::after {
         @extend .sr-only;
         content: "Increment Hours";
     }
 
-    .btn[data-action="incrementMinutes"]::after {
+    .bhtc-btn[data-action="incrementMinutes"]::after {
         @extend .sr-only;
         content: "Increment Minutes";
     }
 
-    .btn[data-action="decrementHours"]::after {
+    .bhtc-btn[data-action="decrementHours"]::after {
         @extend .sr-only;
         content: "Decrement Hours";
     }
 
-    .btn[data-action="decrementMinutes"]::after {
+    .bhtc-btn[data-action="decrementMinutes"]::after {
         @extend .sr-only;
         content: "Decrement Minutes";
     }
 
-    .btn[data-action="showHours"]::after {
+    .bhtc-btn[data-action="showHours"]::after {
         @extend .sr-only;
         content: "Show Hours";
     }
 
-    .btn[data-action="showMinutes"]::after {
+    .bhtc-btn[data-action="showMinutes"]::after {
         @extend .sr-only;
         content: "Show Minutes";
     }
 
-    .btn[data-action="togglePeriod"]::after {
+    .bhtc-btn[data-action="togglePeriod"]::after {
         @extend .sr-only;
         content: "Toggle AM/PM";
     }
 
-    .btn[data-action="clear"]::after {
+    .bhtc-btn[data-action="clear"]::after {
         @extend .sr-only;
         content: "Clear the picker";
     }
 
-    .btn[data-action="today"]::after {
+    .bhtc-btn[data-action="today"]::after {
         @extend .sr-only;
         content: "Set the date to today";
     }
 
-    .picker-switch {
+    .bhtc-picker-switch {
         text-align: center;
 
         &::after {
@@ -213,23 +213,23 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
             line-height: 32px;
             width: 32px;
 
-            &.picker-switch {
+            &.bhtc-picker-switch {
                 width: 144px;
             }
 
-            &.disabled,
-            &.disabled:hover {
+            &.bhtc-disabled,
+            &.bhtc-disabled:hover {
                 background: none;
                 color: $bs-datetimepicker-disabled-color;
                 cursor: not-allowed;
             }
 
-            &.prev::after {
+            &.bhtc-prev::after {
                 @extend .sr-only;
                 content: "Previous Month";
             }
 
-            &.next::after {
+            &.bhtc-next::after {
                 @extend .sr-only;
                 content: "Next Month";
             }
@@ -249,7 +249,7 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
             width: 54px;
             font-size: 12px;
 
-            &.cw {
+            &.bhtc-cw {
                 font-size: .8em;
                 height: 20px;
                 line-height: 20px;
@@ -270,8 +270,8 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
                 cursor: pointer;
             }
 
-            &.old,
-            &.new {
+            &.bhtc-old,
+            &.bhtc-new {
                 color: $bs-datetimepicker-alternate-color;
             }
 
@@ -289,15 +289,15 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
                 }
             }
 
-            &.active,
-            &.active:hover {
+            &.bhtc-active,
+            &.bhtc-active:hover {
                 background-color: $bs-datetimepicker-active-bg;
                 color: $bs-datetimepicker-active-color;
                 text-shadow: $bs-datetimepicker-text-shadow;
             }
 
-            &.disabled,
-            &.disabled:hover {
+            &.bhtc-disabled,
+            &.bhtc-disabled:hover {
                 background: none;
                 color: $bs-datetimepicker-disabled-color;
                 cursor: not-allowed;
@@ -322,18 +322,18 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
                     background: $bs-datetimepicker-btn-hover-bg;
                 }
 
-                &.active {
+                &.bhtc-active {
                     background-color: $bs-datetimepicker-active-bg;
                     color: $bs-datetimepicker-active-color;
                     text-shadow: $bs-datetimepicker-text-shadow;
                 }
 
-                &.old {
+                &.bhtc-old {
                     color: $bs-datetimepicker-alternate-color;
                 }
 
-                &.disabled,
-                &.disabled:hover {
+                &.bhtc-disabled,
+                &.bhtc-disabled:hover {
                     background: none;
                     color: $bs-datetimepicker-disabled-color;
                     cursor: not-allowed;
@@ -342,22 +342,22 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
         }
     }
 
-    &.usetwentyfour {
+    &.bhtc-usetwentyfour {
         td.hour {
             height: 27px;
             line-height: 27px;
         }
     }
 
-    & .timepicker-picker{
+    & .bhtc-timepicker-picker{
         & .table-condensed{
             margin-top: 24px;
         }
     }
 }
 
-.input-group.date {
-    & .input-group-addon {
+.bhtc-input-group.date {
+    & .bhtc-input-group-addon {
         cursor: pointer;
     }
 }
@@ -365,21 +365,20 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
 
 //下拉样式
 // The dropdown wrapper (div)
-.dropup,
-.dropdown {
+.bhtc-dropup,
+.bhtc-dropdown {
     position: relative;
 }
 
 // Prevent the focus on the dropdown toggle when closing dropdowns
-.dropdown-toggle:focus {
+.bhtc-dropdown-toggle:focus {
     outline: 0;
 }
 
 // The dropdown menu (ul)
-.dropdown-menu {
+.bhtc-dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 0;
     z-index: 1000;
     display: none; // none by default, but block on "open" of the menu
     float: left;
@@ -395,25 +394,25 @@ $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !default;
     background-clip: padding-box;
 }
 
-.list-unstyled {
+.bhtc-list-unstyled {
     padding-left: 0;
     list-style: none;
 }
 
-.collapse{
+.bhtc-collapse{
     display: none;
     &.in {
         display: block;
     }
 }
 
-.input-group {
+.bhtc-input-group {
     position: relative;
     display: table;
     border-collapse: separate;
 }
 
-.toggle-period{
+.bhtc-toggle-period{
     width: 100%;
     padding-bottom: 40px;
     text-align: center;
