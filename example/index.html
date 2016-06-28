@@ -27,53 +27,66 @@
             <div>http://res.wisedu.com/fe_components/iconfont/iconfont.css</div>
             <div>http://res.wisedu.com/fe_components/bhtc/bhtc-datetimepicker/css/blue/bhtc-datetimepicker.css</div>
 
+            <h4>html结构示例和初始化</h4>
+            <textarea style="width: 470px;height: 210px;">
+                <div class='bhtc-input-group' >
+                    <input id='datetimepicker' type='text' class="bh-form-control"/>
+                    <span class="bhtc-input-group-addon">
+                        <i class="iconfont icon-daterange"></i>
+                    </span>
+                </div>
+
+                $('#datetimepicker').datetimepicker();
+            </textarea>
+
+
 
             <div class="form-group" style="width: 400px;">
-                <div class='bhtc-input-group' id='datetimepicker1'>
-                    <input type='text' class="form-control"/>
+                默认配置
+                <div class='bhtc-input-group bh-mb-16' >
+                    <input id='datetimepicker1' type='text' class="bh-form-control"/>
                     <span class="bhtc-input-group-addon">
-                        <span class="glyphicon glyphicon-calendar">默认配置
-                        </span>
+                        <i class="iconfont icon-daterange"></i>
                     </span>
                 </div>
 
-                <div class='bhtc-input-group bh-mt-16' id='datetimepicker2'>
-                    <input type='text' class="form-control"/>
+                选择年
+                <div class='bhtc-input-group bh-mb-16'>
+                    <input id='datetimepicker2' type='text' class="bh-form-control"/>
                     <span class="bhtc-input-group-addon">
-                        <span class="glyphicon glyphicon-calendar">选择年
-                        </span>
+                        <i class="iconfont icon-daterange"></i>
                     </span>
                 </div>
 
-                <div class='bhtc-input-group bh-mt-16' id='datetimepicker3'>
-                    <input type='text' class="form-control"/>
+                选择月
+                <div class='bhtc-input-group bh-mb-16'>
+                    <input id='datetimepicker3' type='text' class="bh-form-control"/>
                     <span class="bhtc-input-group-addon">
-                        <span class="glyphicon glyphicon-calendar">选择月
-                        </span>
+                        <i class="iconfont icon-daterange"></i>
                     </span>
                 </div>
 
-                <div class='bhtc-input-group bh-mt-16' id='datetimepicker4'>
-                    <input type='text' class="form-control"/>
+                选择日
+                <div class='bhtc-input-group bh-mb-16'>
+                    <input id='datetimepicker4' type='text' class="bh-form-control"/>
                     <span class="bhtc-input-group-addon">
-                        <span class="glyphicon glyphicon-calendar">选择日
-                        </span>
+                        <i class="iconfont icon-daterange"></i>
                     </span>
                 </div>
 
-                <div class='bhtc-input-group bh-mt-16' id='datetimepicker5'>
-                    <input type='text' class="form-control"/>
+                选择时
+                <div class='bhtc-input-group bh-mb-16'>
+                    <input id='datetimepicker5' type='text' class="bh-form-control"/>
                     <span class="bhtc-input-group-addon">
-                        <span class="glyphicon glyphicon-calendar">选择时
-                        </span>
+                        <i class="iconfont icon-daterange"></i>
                     </span>
                 </div>
 
-                <div class='bhtc-input-group bh-mt-16' id='datetimepicker6'>
-                    <input type='text' class="form-control"/>
+                设定日期范围
+                <div class='bhtc-input-group bh-mb-16'>
+                    <input id='datetimepicker6' type='text' class="bh-form-control"/>
                     <span class="bhtc-input-group-addon">
-                        <span class="glyphicon glyphicon-calendar">设定日期范围
-                        </span>
+                        <i class="iconfont icon-daterange"></i>
                     </span>
                 </div>
             </div>
@@ -114,7 +127,7 @@
                 $('#datetimepicker6').datetimepicker({
 //                    debug: true,
                     minDate: '2016/6/5',
-                    maxDate: '2016/6/27'
+                    maxDate: '2016/7/27'
                 });
             });
         </script>

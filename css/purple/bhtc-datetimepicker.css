@@ -188,8 +188,20 @@
   .bhtc-datetimepicker-widget .bhtc-timepicker-picker .table-condensed {
     margin-top: 24px; }
 
-.bhtc-input-group .bhtc-input-group-addon {
-  cursor: pointer; }
+.bhtc-input-group {
+  position: relative;
+  border-collapse: separate;
+  background-color: #fff; }
+  .bhtc-input-group .bhtc-input-group-addon {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 4px; }
+  .bhtc-input-group .bh-form-control {
+    position: relative;
+    padding-right: 22px;
+    background-color: transparent;
+    z-index: 100; }
 
 .bhtc-dropup,
 .bhtc-dropdown {
@@ -223,11 +235,6 @@
   display: none; }
   .bhtc-collapse.in {
     display: block; }
-
-.bhtc-input-group {
-  position: relative;
-  display: table;
-  border-collapse: separate; }
 
 .bhtc-toggle-period {
   width: 100%;
