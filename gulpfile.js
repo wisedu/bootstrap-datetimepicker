@@ -8,7 +8,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 
 var cssFiles = [
-    'blue', 'colorE', 'green', 'lightBlue', 'purple'
+    'blue', 'colorE', 'green', 'lightBlue', 'purple', 'cyan-arctic', 'green-olive', 'red-strawberry', 'yellow-fawn'
 ];
 
 var cssConfig = {

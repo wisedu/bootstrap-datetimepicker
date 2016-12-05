@@ -1,0 +1,58 @@
+//base color
+$gray-base:              #000;
+$gray-lv1:              #333;
+$gray-lv2:              #666;
+$gray-lv3:              #bbb;
+$gray-lv4:              #ddd;
+$gray-lv5:              #eee;
+
+$brand-primary:  #fa595b;
+$primary-lv2:    #fc8e8f;
+$primary-lv3:    #fedede;
+$primary-lv4:    #fff2f2;
+$primary-lv5:    #fff8f8;
+$primary-hover: $brand-primary;
+
+$brand-success:  #3dcb9a;
+$success-lv2:    #7bdcba;
+$success-lv3:    #d8f5eb;
+$success-lv4:    #effbf7;
+$success-lv5:    #f7fdfb;
+$success-hover: $brand-success;
+
+$brand-info:     #973566;
+$info-lv2:       #b87697;
+$info-lv3:       #ead7e0;
+$info-lv4:       #f7eff3;
+$info-lv5:       #fbf7f9;
+$info-hover: $brand-info;
+
+$brand-warning:  #fd996b;
+$warning-lv2:    #feba9a;
+$warning-lv3:    #ffebe1;
+$warning-lv4:    #fff7f3;
+$warning-lv5:    #fffbf9;
+$warning-hover: $brand-warning;
+
+$brand-danger:   #fc5e86;
+$danger-lv2:     #fd92ad;
+$danger-lv3:     #fedfe7;
+$danger-lv4:     #fff2f5;
+$danger-lv5:     #fff9fa;
+$danger-hover: $brand-danger;
+
+
+$brand-white: #fff;
+$brand-transparent: transparent;
+
+//font color
+$text-gray: $gray-lv1;
+
+$body-bg-color: $brand-white;
+
+
+$normal-border-color: $gray-lv4;
+$normal-bg-color: $gray-lv4;
+
+
+

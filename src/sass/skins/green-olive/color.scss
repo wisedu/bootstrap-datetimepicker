@@ -1,0 +1,58 @@
+//base color
+$gray-base:              #000;
+$gray-lv1:              #333;
+$gray-lv2:              #666;
+$gray-lv3:              #bbb;
+$gray-lv4:              #ddd;
+$gray-lv5:              #eee;
+
+$brand-primary:  #689aca;
+$primary-lv2:    #98badb;
+$primary-lv3:    #e1ebf4;
+$primary-lv4:    #f3f7fb;
+$primary-lv5:    #f9fbfd;
+$primary-hover: $brand-primary;
+
+$brand-success:  #bac938;
+$success-lv2:    #d0da78;
+$success-lv3:    #f1f4d7;
+$success-lv4:    #f9fbef;
+$success-lv5:    #fcfdf7;
+$success-hover: $brand-success;
+
+$brand-info:     #a7b938;
+$info-lv2:       #c3cf78;
+$info-lv3:       #edf1d7;
+$info-lv4:       #f8f9ef;
+$info-lv5:       #fbfcf7;
+$info-hover: $brand-info;
+
+$brand-warning:  #fd996b;
+$warning-lv2:    #feba9a;
+$warning-lv3:    #ffebe1;
+$warning-lv4:    #fff7f3;
+$warning-lv5:    #fffbf9;
+$warning-hover: $brand-warning;
+
+$brand-danger:   #fa595b;
+$danger-lv2:     #fc8e8f;
+$danger-lv3:     #fedede;
+$danger-lv4:     #fff2f2;
+$danger-lv5:     #fff8f8;
+$danger-hover: $brand-danger;
+
+
+$brand-white: #fff;
+$brand-transparent: transparent;
+
+//font color
+$text-gray: $gray-lv1;
+
+$body-bg-color: $brand-white;
+
+
+$normal-border-color: $gray-lv4;
+$normal-bg-color: $gray-lv4;
+
+
+
